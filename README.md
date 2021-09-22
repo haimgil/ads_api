@@ -11,6 +11,9 @@ This project allows manage ads and impressions requests as well as getting stati
 App designed to have independent controller for each exposed endpoint. Every controller using its dedicated service which perform the app internal logic. Moreover, there is a gateway service which as exit point to external service.  
 The app using Redis as one of its data structures is key-value store which meet the requirement of holding a counter of ads/impressions per user/sdkVersion and able to provide high availability when needed.
 
+## Run
+> docker-compose up
+
 ## APIs
 This app exposing 3 endpoints as detailed below:
 * **GetAd** - POST request that accept json body as shown below and return as response an XML in a VAST ad format that getting from external api. In addition, updating how many ad requests per user/sdkVersion.
